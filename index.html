@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Simanto Mitro — Technologist · Founder · Youth Leader</title>
+  <meta name="description" content="Simanto Mitro — Using AI to solve real problems and on a mission to transform healthcare. Founder & CEO of NeuroParsec, Founder & President of Cancer CARE Bangladesh.">
+  <link rel="canonical" href="https://simantomitro.netlify.app/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://simantomitro.netlify.app/">
+  <meta property="og:title" content="Simanto Mitro — Technologist · Founder · Youth Leader">
+  <meta property="og:description" content="I use AI to solve real problems, and I'm on a mission to transform healthcare. Founder & CEO of NeuroParsec, Founder & President of Cancer CARE Bangladesh.">
+  <meta property="og:image" content="https://simantomitro.netlify.app/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Simanto Mitro — Technologist, Founder and Youth Leader">
+  <meta property="og:site_name" content="Simanto Mitro">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://simantomitro.netlify.app/">
+  <meta name="twitter:title" content="Simanto Mitro — Technologist · Founder · Youth Leader">
+  <meta name="twitter:description" content="I use AI to solve real problems, and I'm on a mission to transform healthcare.">
+  <meta name="twitter:image" content="https://simantomitro.netlify.app/og.jpg">
+  <meta name="twitter:image:alt" content="Simanto Mitro — Technologist, Founder and Youth Leader">
+  <meta name="theme-color" content="#060b18">
+
+  <!-- JSON-LD Structured Data: Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Simanto Mitro",
+    "email": "mailto:connect.simanto@gmail.com",
+    "jobTitle": "Founder & CEO, NeuroParsec",
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "NeuroParsec"
+      },
+      {
+        "@type": "Organization",
+        "name": "Cancer CARE Bangladesh"
+      }
+    ],
+    "description": "Technologist, Founder & Youth Leader using AI to solve real problems and transform healthcare.",
+    "url": "https://simantomitro.netlify.app/",
+    "sameAs": [
+      "https://www.linkedin.com/in/simanto-mitro-7778b4256/",
+      "https://www.facebook.com/simantomitro",
+      "https://x.com/simanto_mitro",
+      "https://github.com/Simanto101"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Instrument Serif (Italic), Unbounded & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Unbounded:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- First film frame, fetched early for an instant hero -->
+  <link rel="preload" as="image" href="https://simanto101.github.io/Creative-Portfolio-Website/frames-mobile/frame-001.webp" media="(max-width: 767.98px)" fetchpriority="high">
+  <link rel="preload" as="image" href="https://simanto101.github.io/Creative-Portfolio-Website/frames-desktop/frame-001.webp" media="(min-width: 768px)" fetchpriority="high">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./lab.css">
+
+  <!-- Lenis Momentum Smooth Scroll -->
+  <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <!-- GSAP & ScrollTrigger -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Smoky Blue Cursor Light (Desktop Only) -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Mobile Glass Burger Button -->
+  <button class="mobile-nav-toggle" id="mobile-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Site menu" aria-hidden="true">
+    <a href="#hero" class="drawer-link">Home</a>
+    <a href="./about.html" class="drawer-link">About</a>
+    <a href="./neuroparsec.html" class="drawer-link">NeuroParsec</a>
+    <a href="./ccb.html" class="drawer-link">CCB</a>
+    <a href="./leadership.html" class="drawer-link">Leadership</a>
+    <a href="./playground.html" class="drawer-link">Playground</a>
+    <a href="./coffee.html" class="nav-cta">
+      <svg viewBox="0 0 24 24"><path d="M18.5 3H6c-1.1 0-2 .9-2 2v10c0 3.31 2.69 6 6 6h2c3.31 0 6-2.69 6-6V5c0-1.1-.9-2-2-2zm-2 2v3h-4V5h4zm-6 0v3H6V5h4.5zm7.5 10c0 2.21-1.79 4-4 4h-2c-2.21 0-4-1.79-4-4v-5h10v5zM20 7v5c0 1.1-.9 2-2 2h-1v-2h1V7h-1V5h1c1.1 0 2 .9 2 2z"/></svg>
+      <span>Pull Up a Chair</span>
+    </a>
+    <div class="drawer-social">
+      <a href="https://www.linkedin.com/in/simanto-mitro-7778b4256/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+      <a href="https://x.com/simanto_mitro" target="_blank" rel="noopener" aria-label="X">X</a>
+      <a href="https://www.facebook.com/simantomitro" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+      <a href="mailto:connect.simanto@gmail.com" aria-label="Email">Email</a>
+    </div>
+  </div>
+
+  <!-- Persistent Dynamic Nav: Horizontal Top Pill morphs to Vertical Left Panel -->
+  <div class="nav-wrapper" id="nav-wrapper">
+    <nav class="glass-nav" aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li>
+          <a href="#hero" class="nav-link active" data-label="Home">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="./about.html" class="nav-link" data-label="About">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span class="nav-text">About</span>
+          </a>
+        </li>
+        <li>
+          <a href="./neuroparsec.html" class="nav-link" data-label="NeuroParsec">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            <span class="nav-text">NeuroParsec</span>
+          </a>
+        </li>
+        <li>
+          <a href="./ccb.html" class="nav-link" data-label="CCB">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span class="nav-text">CCB</span>
+          </a>
+        </li>
+        <li>
+          <a href="./leadership.html" class="nav-link" data-label="Leadership">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path></svg>
+            <span class="nav-text">Leadership</span>
+          </a>
+        </li>
+        <li>
+          <a href="./playground.html" class="nav-link" data-label="Playground">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L4.08 19.16A2 2 0 0 0 5.8 22h12.4a2 2 0 0 0 1.72-2.84L14 9.31V2"></path><path d="M8.5 2h7"></path></svg>
+            <span class="nav-text">Playground</span>
+          </a>
+        </li>
+      </ul>
+      <a href="./coffee.html" class="nav-cta" aria-label="Reserve a seat">
+        <svg viewBox="0 0 24 24"><path d="M18.5 3H6c-1.1 0-2 .9-2 2v10c0 3.31 2.69 6 6 6h2c3.31 0 6-2.69 6-6V5c0-1.1-.9-2-2-2zm-2 2v3h-4V5h4zm-6 0v3H6V5h4.5zm7.5 10c0 2.21-1.79 4-4 4h-2c-2.21 0-4-1.79-4-4v-5h10v5zM20 7v5c0 1.1-.9 2-2 2h-1v-2h1V7h-1V5h1c1.1 0 2 .9 2 2z"/></svg>
+        <span class="cta-full">Pull Up a Chair</span>
+        <span class="cta-short">Chair</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Hardware-Accelerated 60fps Canvas Viewport with 96 Progressive WebP Frames -->
+  <div class="stage-viewport" aria-hidden="true">
+    <canvas id="hero-canvas"></canvas>
+    <div class="stage-vignette"></div>
+  </div>
+
+  <!-- Scrollable Sections Container -->
+  <main class="scroll-container">
+
+    <!-- ====================================================================
+         SECTION 1: HERO
+         ==================================================================== -->
+    <section class="scene-section hero-scene" id="hero">
+      <div class="scene-inner">
+        <div class="hero-content">
+          <div class="eyebrow">Building what's next in care.</div>
+
+          <div class="hero-name-wrapper">
+            <h1 class="hero-name-serif is-split"><span class="sr-only">Simanto</span><span class="char-mask" aria-hidden="true"><span class="char" style="--i:0">S</span></span><span class="char-mask" aria-hidden="true"><span class="char" style="--i:1">i</span></span><span class="char-mask" aria-hidden="true"><span class="char" style="--i:2">m</span></span><span class="char-mask" aria-hidden="true"><span class="char" style="--i:3">a</span></span><span class="char-mask" aria-hidden="true"><span class="char" style="--i:4">n</span></span><span class="char-mask" aria-hidden="true"><span class="char" style="--i:5">t</span></span><span class="char-mask" aria-hidden="true"><span class="char" style="--i:6">o</span></span></h1>
+            <div class="hero-name-outline is-split"><span class="sr-only">MITRO</span><span class="char" aria-hidden="true" style="--i:0">M</span><span class="char" aria-hidden="true" style="--i:1">I</span><span class="char" aria-hidden="true" style="--i:2">T</span><span class="char" aria-hidden="true" style="--i:3">R</span><span class="char" aria-hidden="true" style="--i:4">O</span></div>
+          </div>
+
+          <p class="hero-tagline">
+            I use AI to solve real problems, and I'm on a mission to <span class="highlight-bold">transform healthcare.</span>
+          </p>
+
+          <div class="hero-pills">
+            <!-- NeuroParsec: ECG Pulse Line SVG -->
+            <a href="./neuroparsec.html" class="glass-pill">
+              <span class="pill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h4l3-7 4 14 3-7h4"/>
+                </svg>
+              </span>
+              <span>Founder & CEO, NeuroParsec</span>
+            </a>
+            <!-- Cancer CARE Bangladesh: Heart Ribbon SVG -->
+            <a href="./ccb.html" class="glass-pill">
+              <span class="pill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </span>
+              <span>Founder & President, Cancer CARE Bangladesh (CCB)</span>
+            </a>
+          </div>
+
+          <!-- As Featured In Strip with Auto-Marquee for Mobile -->
+          <div class="featured-strip">
+            <span class="featured-label">AS FEATURED IN</span>
+            <div class="featured-outlets">
+              <div class="marquee-track">
+                <span class="outlet-item">Prothom Alo</span>
+                <span class="outlet-item">The Business Standard</span>
+                <span class="outlet-item">bdnews24</span>
+                <!-- Duplicate for seamless looping marquee on mobile -->
+                <span class="outlet-item" aria-hidden="true">Prothom Alo</span>
+                <span class="outlet-item" aria-hidden="true">The Business Standard</span>
+                <span class="outlet-item" aria-hidden="true">bdnews24</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: AT A GLANCE
+         ==================================================================== -->
+    <section class="scene-section glance-scene" id="glance-section">
+      <div class="scene-inner">
+        <div class="glance-content">
+          <div class="eyebrow">AT A GLANCE</div>
+          <h2 class="scene-title">Where I build.</h2>
+
+          <div class="cards-deck">
+
+            <!-- Card 01: NeuroParsec -->
+            <article class="deck-card" id="card-neuroparsec">
+              <div class="card-top">
+                <div class="card-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="3"/>
+                    <circle cx="4" cy="6" r="2"/>
+                    <circle cx="20" cy="6" r="2"/>
+                    <circle cx="4" cy="18" r="2"/>
+                    <circle cx="20" cy="18" r="2"/>
+                    <path d="M6 7l4 3.5M14 10.5L18 7M6 17l4-3.5M14 13.5L18 17"/>
+                  </svg>
+                </div>
+                <span class="card-number">01</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">NeuroParsec</h3>
+                <p class="card-desc">AI for clinical care and medical education.</p>
+              </div>
+              <a href="./neuroparsec.html" class="card-link" aria-label="Explore NeuroParsec">Explore &rarr;</a>
+            </article>
+
+            <!-- Card 02: Cancer CARE Bangladesh -->
+            <article class="deck-card" id="card-ccb">
+              <div class="card-top">
+                <div class="card-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" stroke-width="1.8">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </div>
+                <span class="card-number">02</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Cancer CARE Bangladesh</h3>
+                <p class="card-desc">Cancer care, youth mental health and free real-hair wigs.</p>
+              </div>
+              <a href="./ccb.html" class="card-link" aria-label="Explore Cancer CARE Bangladesh">Explore &rarr;</a>
+            </article>
+
+            <!-- Card 03: Leadership -->
+            <article class="deck-card" id="card-leadership">
+              <div class="card-top">
+                <div class="card-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" stroke-width="1.8">
+                    <circle cx="12" cy="8" r="6"/>
+                    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+                  </svg>
+                </div>
+                <span class="card-number">03</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Leadership</h3>
+                <p class="card-desc">PSO International Affairs. HUMIN. Aspire Leaders 2026.</p>
+              </div>
+              <a href="./leadership.html" class="card-link" aria-label="Explore Leadership">Explore &rarr;</a>
+            </article>
+
+            <!-- Card 04: Playground -->
+            <article class="deck-card" id="card-playground">
+              <div class="card-top">
+                <div class="card-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" stroke-width="1.8">
+                    <path d="M10 2v7.31L4.08 19.16A2 2 0 005.8 22h12.4a2 2 0 001.72-2.84L14 9.31V2"/>
+                    <path d="M8.5 2h7M7 16h10"/>
+                  </svg>
+                </div>
+                <span class="card-number">04</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Playground</h3>
+                <p class="card-desc">Experiments, automations and things I'm cooking.</p>
+              </div>
+              <a href="./playground.html" class="card-link" aria-label="Explore Playground">Explore &rarr;</a>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: STORY
+         ==================================================================== -->
+    <section class="scene-section story-scene" id="story-section">
+      <div class="scene-inner">
+        <div class="story-content">
+
+          <div class="story-progress-rail" aria-hidden="true">
+            <div class="story-progress-indicator" id="story-indicator"></div>
+          </div>
+
+          <div class="story-lines-container">
+            <p class="story-line active">Every problem I meet becomes a question.</p>
+            <p class="story-line">Technology helps me answer it.</p>
+            <p class="story-line">Advanced AI turns those answers into real solutions.</p>
+            <p class="story-line">And healthcare is where those solutions matter most.</p>
+            <div class="story-line brand-heading">NeuroParsec</div>
+            <p class="story-line">So I'm building it, to change how care is delivered.</p>
+            <p class="story-line">But some problems need people, not code.</p>
+            <p class="story-line">For six years, Cancer CARE Bangladesh has stood beside cancer patients and young minds.</p>
+            <p class="story-line">We are the only organisation in Bangladesh turning donated hair into free wigs for cancer patients.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: PULL UP A CHAIR
+         ==================================================================== -->
+    <section class="scene-section chair-scene" id="chair-section">
+      <div class="scene-inner">
+        <div class="chair-content">
+          <h2 class="chair-title">
+            Great things begin with a simple conversation. <em>Let's have ours.</em>
+          </h2>
+
+          <p class="chair-desc">
+            If your mission is to make life better through technology, care or people, our paths are meant to cross. Pull up a chair.
+          </p>
+
+          <div class="mug-form-wrapper">
+
+            <svg class="steam-emitter" viewBox="0 0 100 60" aria-hidden="true">
+              <path class="steam-path" d="M30 50 Q 25 35 35 25 T 30 5"/>
+              <path class="steam-path" d="M50 50 Q 55 35 45 25 T 52 5"/>
+              <path class="steam-path" d="M70 50 Q 65 35 75 25 T 70 5"/>
+            </svg>
+
+            <div class="mug-body">
+              <div class="mug-header">
+                <svg viewBox="0 0 24 24"><path d="M18.5 3H6c-1.1 0-2 .9-2 2v10c0 3.31 2.69 6 6 6h2c3.31 0 6-2.69 6-6V5c0-1.1-.9-2-2-2zm-2 2v3h-4V5h4zm-6 0v3H6V5h4.5zm7.5 10c0 2.21-1.79 4-4 4h-2c-2.21 0-4-1.79-4-4v-5h10v5zM20 7v5c0 1.1-.9 2-2 2h-1v-2h1V7h-1V5h1c1.1 0 2 .9 2 2z"/></svg>
+                <span>Pull Up a Chair</span>
+              </div>
+
+              <form id="chair-form" name="pull-up-a-chair" method="POST" data-netlify="true" netlify>
+                <input type="hidden" name="form-name" value="pull-up-a-chair" />
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="text" name="name" class="glass-input" placeholder="Your name" required />
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" class="glass-input" placeholder="Email" required />
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 10px;">
+                  <input type="text" name="mission" class="glass-input" placeholder="What's your mission?" required />
+                </div>
+
+                <div class="form-row" style="margin-top: 10px;">
+                  <div class="form-group">
+                    <input type="text" name="preferred_day" class="glass-input" placeholder="Preferred day" required />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="preferred_time" class="glass-input" placeholder="Time" required />
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-reserve">Reserve My Seat</button>
+              </form>
+
+              <div class="form-success-banner" id="form-success">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#34d399" stroke-width="2.5" style="margin: 0 auto 8px auto; display: block;">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+                <strong>Seat Reserved!</strong><br>
+                Looking forward to coffee and a great conversation.
+              </div>
+            </div>
+
+            <div class="mug-handle" aria-hidden="true"></div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       SECTION 5: FOOTER
+       ==================================================================== -->
+    <div class="lab-footer-band" aria-hidden="true"><div class="lab-band-track"><span>SIMANTO MITRO</span><span>SIMANTO MITRO</span><span>SIMANTO MITRO</span></div></div>
+  <footer class="footer-section" id="footer-section">
+    <div class="footer-panel">
+
+      <div class="footer-col">
+        <span class="footer-tag">CONNECT</span>
+        <h3 class="footer-heading">Let's stay in touch.</h3>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/simanto-mitro-7778b4256/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+          <a href="mailto:connect.simanto@gmail.com" class="social-btn" aria-label="Email">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+          <a href="https://x.com/simanto_mitro" target="_blank" rel="noopener" class="social-btn" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/simantomitro" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-tag">EXPLORE</span>
+        <ul class="footer-links-list">
+          <li><a href="./neuroparsec.html">NeuroParsec</a></li>
+          <li><a href="./ccb.html">Cancer CARE Bangladesh</a></li>
+          <li><a href="./leadership.html">Leadership</a></li>
+          <li><a href="./playground.html">Playground</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-tag">REACH</span>
+        <div class="footer-reach-item">
+          <a href="mailto:connect.simanto@gmail.com">connect.simanto@gmail.com</a>
+        </div>
+        <div class="footer-reach-item">
+          <span>Dhaka, Bangladesh</span>
+        </div>
+        <a href="./coffee.html" class="footer-chair-btn">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M18.5 3H6c-1.1 0-2 .9-2 2v10c0 3.31 2.69 6 6 6h2c3.31 0 6-2.69 6-6V5c0-1.1-.9-2-2-2zm-2 2v3h-4V5h4zm-6 0v3H6V5h4.5zm7.5 10c0 2.21-1.79 4-4 4h-2c-2.21 0-4-1.79-4-4v-5h10v5zM20 7v5c0 1.1-.9 2-2 2h-1v-2h1V7h-1V5h1c1.1 0 2 .9 2 2z"/></svg>
+          <span>Pull Up a Chair</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-copyright">
+      &copy; 2026 SIMANTO MITRO &middot; ALL RIGHTS RESERVED
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript Engine -->
+  <script defer src="./main.js"></script>
+  <script defer src="./lab.js"></script>
+</body>
+</html>

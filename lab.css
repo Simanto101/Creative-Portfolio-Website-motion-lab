@@ -1,0 +1,92 @@
+/* ==========================================================================
+   MOTION LAB (experiment copy only — the original site does not have this file)
+   MotionSites-inspired layer: scroll progress hairline, soft hero ambience,
+   section reveals, giant-type footer band. Transform/opacity only, so the
+   film stays light. Nothing here touches the frames or the hero timing.
+   ========================================================================== */
+
+/* --- Scroll progress hairline --- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 9999;
+  pointer-events: none;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, #38bdf8, #f5c97b);
+}
+
+/* --- Hero ambience: a slow, soft breathing glow behind the hero copy --- */
+.hero-scene { position: relative; }
+.hero-scene::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(55% 42% at 70% 36%, rgba(245, 201, 123, 0.13), transparent 62%),
+    radial-gradient(42% 34% at 18% 72%, rgba(56, 189, 248, 0.10), transparent 62%);
+  opacity: 0.55;
+  animation: labBreathe 9s ease-in-out infinite alternate;
+}
+.hero-content { position: relative; z-index: 2; }
+@keyframes labBreathe {
+  from { opacity: 0.38; }
+  to   { opacity: 0.72; }
+}
+
+/* --- Section reveals (only armed when lab.js runs: html.lab-on) --- */
+html.lab-on [data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--rd, 0s);
+  will-change: opacity, transform;
+}
+html.lab-on [data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Giant-type footer band (MotionSites footer pattern) --- */
+.lab-footer-band {
+  overflow: hidden;
+  padding: 3rem 0 0.5rem;
+  pointer-events: none;
+  user-select: none;
+}
+.lab-band-track {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  animation: labBand 32s linear infinite;
+}
+.lab-band-track span {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 10.5vw, 7.5rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: rgba(241, 245, 249, 0.05);
+  -webkit-text-stroke: 1.5px rgba(241, 245, 249, 0.38);
+}
+@keyframes labBand {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scene::before,
+  .lab-band-track { animation: none; }
+  html.lab-on [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
