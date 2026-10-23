@@ -90,3 +90,115 @@ html.lab-on [data-reveal].in {
     transition: none;
   }
 }
+
+// ==========================================================================
+// LAB v2 additions (bold): watermark parallax, slam reveals, card tilt+shine
+// Transform/opacity only. The hero film engine in main.js stays untouched.
+// ==========================================================================
+
+/* --- Giant outlined watermark behind the hero copy (drifts with scroll) --- */
+.lab-watermark {
+  position: absolute;
+  top: 3%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.lab-watermark-track {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 800;
+  font-size: clamp(7rem, 23vw, 20rem);
+  line-height: 0.95;
+  white-space: nowrap;
+  width: max-content;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(241, 245, 249, 0.13);
+  will-change: transform;
+}
+.hero-scene .scene-inner { position: relative; z-index: 1; }
+
+/* --- Kinetic type marquee between hero and glance --- */
+.lab-marquee {
+  overflow: hidden;
+  border-top: 1px solid rgba(241, 245, 249, 0.14);
+  border-bottom: 1px solid rgba(241, 245, 249, 0.14);
+  background: rgba(56, 189, 248, 0.04);
+  padding: 1.1rem 0;
+  pointer-events: none;
+  user-select: none;
+}
+.lab-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: max-content;
+  animation: labMarquee 26s linear infinite;
+}
+.lab-marquee-track span {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.4vw, 1.55rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #e8eefc;
+  white-space: nowrap;
+}
+.lab-marquee-track i {
+  font-style: normal;
+  color: #f5c97b;
+  font-size: 1.1rem;
+}
+@keyframes labMarquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* --- Slam reveals for section headings --- */
+html.lab-on [data-reveal="slam"] {
+  opacity: 0;
+  transform: translateY(48px) scale(0.93);
+  transition:
+    opacity 0.9s ease,
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html.lab-on [data-reveal="slam"].in {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Deck cards: pointer shine + 3D tilt (fine pointers only) --- */
+.deck-card { position: relative; }
+.deck-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(56, 189, 248, 0.15), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.deck-card:hover::after { opacity: 1; }
+.deck-card.lab-tilt {
+  transition: transform 0.18s ease-out, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+/* --- Footer band: middle name in solid champagne --- */
+.lab-band-track span:nth-child(2) {
+  color: rgba(245, 201, 123, 0.92);
+  -webkit-text-stroke: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lab-marquee-track { animation: none; }
+  html.lab-on [data-reveal="slam"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
